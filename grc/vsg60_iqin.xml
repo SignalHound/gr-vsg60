@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<block>
+  <name>VSG60: IQ Sink</name>
+  <key>vsg60_iqin</key>
+  <category>[Signal Hound VSG60]</category>
+  <import>import vsg60</import>
+  <make>vsg60.iqin($frequency, $level, $srate, $repeat)</make>
+  <callback>set_frequency($frequency)</callback>
+  <callback>set_level($level)</callback>
+  <callback>set_srate($srate)</callback>
+  <callback>set_repeat($repeat)</callback>
+
+  <param>
+    <name>Frequency</name>
+    <key>frequency</key>
+    <value>1e9</value>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Level</name>
+    <key>level</key>
+    <value>-10</value>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Sample Rate</name>
+    <key>srate</key>
+    <value>50e6</value>
+    <type>float</type>
+  </param>
+
+  <param>
+    <name>Repeat</name>
+    <key>repeat</key>
+    <value>False</value>
+    <type>bool</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+
+</block>
