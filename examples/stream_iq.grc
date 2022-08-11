@@ -1,184 +1,75 @@
-<?xml version='1.0' encoding='utf-8'?>
-<?grc format='1' created='3.7.11'?>
-<flow_graph>
-  <timestamp>Thu Aug  6 13:52:52 2020</timestamp>
-  <block>
-    <key>options</key>
-    <param>
-      <key>author</key>
-      <value></value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>[GRC Hier Blocks]</value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>description</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(8, 8)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>qt_gui</value>
-    </param>
-    <param>
-      <key>hier_block_src_path</key>
-      <value>.:</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>stream_iq</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>qt_qss_theme</key>
-      <value></value>
-    </param>
-    <param>
-      <key>realtime_scheduling</key>
-      <value></value>
-    </param>
-    <param>
-      <key>run_command</key>
-      <value>{python} -u {filename}</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>thread_safe_setters</key>
-      <value></value>
-    </param>
-    <param>
-      <key>title</key>
-      <value></value>
-    </param>
-  </block>
-  <block>
-    <key>analog_const_source_x</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>const</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(416, 260)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>analog_const_source_x_0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-  </block>
-  <block>
-    <key>vsg60_iqin</key>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>frequency</key>
-      <value>1e9</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(704, 236)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>vsg60_iqin_0</value>
-    </param>
-    <param>
-      <key>level</key>
-      <value>-10</value>
-    </param>
-    <param>
-      <key>repeat</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>srate</key>
-      <value>50e6</value>
-    </param>
-  </block>
-  <connection>
-    <source_block_id>analog_const_source_x_0</source_block_id>
-    <sink_block_id>vsg60_iqin_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-</flow_graph>
+options:
+  parameters:
+    author: Signal Hound
+    catch_exceptions: 'True'
+    category: '[GRC Hier Blocks]'
+    cmake_opt: ''
+    comment: ''
+    copyright: ''
+    description: ''
+    gen_cmake: 'On'
+    gen_linking: dynamic
+    generate_options: qt_gui
+    hier_block_src_path: '.:'
+    id: stream_iq
+    max_nouts: '0'
+    output_language: python
+    placement: (0,0)
+    qt_qss_theme: ''
+    realtime_scheduling: ''
+    run: 'True'
+    run_command: '{python} -u {filename}'
+    run_options: prompt
+    sizing_mode: fixed
+    thread_safe_setters: ''
+    title: Stream I/Q
+    window_size: ''
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [8, 8]
+    rotation: 0
+    state: enabled
+
+blocks:
+- name: analog_const_source_x_0
+  id: analog_const_source_x
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    const: '1'
+    maxoutbuf: '0'
+    minoutbuf: '0'
+    type: complex
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [344, 260.0]
+    rotation: 0
+    state: true
+- name: vsg60_iqin_0
+  id: vsg60_iqin
+  parameters:
+    affinity: ''
+    alias: ''
+    comment: ''
+    frequency: 1e9
+    level: '-10'
+    repeat: 'False'
+    srate: 50e6
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [704, 236]
+    rotation: 0
+    state: enabled
+
+connections:
+- [analog_const_source_x_0, '0', vsg60_iqin_0, '0']
+
+metadata:
+  file_format: 1

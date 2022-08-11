@@ -1,0 +1,39 @@
+id: vsg60_iqin
+label: 'VSG60: IQ Sink'
+category: '[Signal Hound]'
+
+templates:
+  imports: import vsg60
+  make: vsg60.iqin(${frequency}, ${level}, ${srate}, ${repeat})
+  callbacks:
+  - set_frequency(${frequency})
+  - set_level(${level})
+  - set_srate(${srate})
+  - set_repeat(${repeat})
+
+parameters:
+- id: frequency
+  label: Frequency
+  dtype: float
+  default: 1e9
+- id: level
+  label: Level
+  dtype: float
+  default: -10
+- id: srate
+  label: Sample Rate
+  dtype: float
+  default: 50e6
+- id: repeat
+  label: Repeat
+  dtype: bool
+  default: false  
+
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+
+outputs:
+
+file_format: 1
