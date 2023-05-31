@@ -123,7 +123,7 @@ int iqin_impl::work(int noutput_items,
     if(_repeat) {
         ERROR_CHECK(vsgRepeatWaveform(_handle, (float *)_buffer, noutput_items));
     } else {
-        ERROR_CHECK(vsgOutputWaveform(_handle, (float *)_buffer, noutput_items));
+        ERROR_CHECK(vsgSubmitIQ(_handle, (float *)_buffer, noutput_items));
     }
 
     return noutput_items;
